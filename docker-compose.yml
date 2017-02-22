@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+  redmine:
+    image: redmine
+    ports:
+      - 8080:3000
+    environment:
+      REDMINE_DB_MYSQL: mysql
+      REDMINE_DB_PASSWORD: redmine
+    links:
+      - mysql
+    restart: always
+
+  mysql:
+    # image: mariadb
+    # environment:
+    #   MYSQL_ROOT_PASSWORD: redmine
+    #   MYSQL_DATABASE: redmine
+    # restart: always
+    build: ./mysql
+    restart: always
