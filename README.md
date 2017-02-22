@@ -6,6 +6,14 @@ docker > redmine + mysql
 run
 --------------------------------------------------------------------------------
 
+first
 ```bash
 $ docker-compose up
+```
+
+next
+```bash
+$ docker-compose start
+...
+$ docker-compose stop
 ```
